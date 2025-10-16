@@ -9,7 +9,7 @@ export function counterReducer(state, action) {
     case "DECREMENT":
       return { count: state.count > 0 ? state.count - 1 : 0 };
     case "RESET":
-      return initalState
+      return counterinitalState
     default:
       throw new Error("Unknown action type")
   }
