@@ -1,24 +1,35 @@
 import { create } from "zustand";
-import { devtools } from "zustand/middleware"  
+import { devtools, persist } from "zustand/middleware"
 
-export const useCartStore = create(devtools(
-  (set) => ({
-  // empty cart array
-  cart: [],
+export const useCartStore = create(
+  devtools(
+    persist(
+      (set) => ({
 
-  // add item
-  addItem: (item) => set( (state) => ({
-    cart: [...state.cart, item]
-  }) ),
+        cart: [],
 
-  // remove item
-  removeItem: (id) =>
-  set( (state) => ({
-    cart: state.cart.filter((item) => item.id !== id),
-  }) ),
+        addItem: (item) =>
+          set((state) => ({
+            cart: [...state.cart, item]
+          })),
 
-  // clear cart
-  clearCart: () => set({ cart: [] })
+        removeItem: (id) =>
+          set((state) => ({
+            cart: state.cart.filter((item) => item.id !== id)
+          })),
 
-})
-))
+        clearCart: () => set({ cart: [] }),
+      }),
+
+      {
+        name: "cart-storage", // key name for localstorage
+      },
+
+    ),
+
+    {
+      name: "CartStore" // name shown in redux DevTools
+    }
+
+  )
+)
