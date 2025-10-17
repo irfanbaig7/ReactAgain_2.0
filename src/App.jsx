@@ -5,6 +5,7 @@ import { CounterProvider } from './02_useReduAndContextApi/GlobalCounter/Counter
 import { AuthContextprovider } from './02_useReduAndContextApi/Authenctication/AuthContext'
 import Loing from './02_useReduAndContextApi/Authenctication/Loing'
 import Profile from './02_useReduAndContextApi/Authenctication/Profile'
+import Zustandd from './03_Zustand/Zustandd'
 
 const App = () => {
   return (
@@ -19,10 +20,14 @@ const App = () => {
         <UseReduAndContext />
       </CounterProvider> */}
 
-      <AuthContextprovider>
+      {/* <AuthContextprovider>
         <Loing />
         <Profile />
-      </AuthContextprovider>
+      </AuthContextprovider> */}
+
+
+      {/* 03 Zustand */}
+      <Zustandd />
 
     </>
   )
