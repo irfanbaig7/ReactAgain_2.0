@@ -6,6 +6,7 @@ import { AuthContextprovider } from './02_useReduAndContextApi/Authenctication/A
 import Loing from './02_useReduAndContextApi/Authenctication/Loing'
 import Profile from './02_useReduAndContextApi/Authenctication/Profile'
 import Zustandd from './03_Zustand/Zustandd'
+import Axios from './04_Axios/Axios'
 
 const App = () => {
   return (
@@ -27,7 +28,11 @@ const App = () => {
 
 
       {/* 03 Zustand */}
-      <Zustandd />
+      {/* <Zustandd /> */}
+
+
+      {/* 04 axios */}
+      <Axios />
 
     </>
   )
