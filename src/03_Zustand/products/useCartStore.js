@@ -1,6 +1,8 @@
 import { create } from "zustand";
+import { devtools } from "zustand/middleware"  
 
-export const useCartStore = create((set) => ({
+export const useCartStore = create(devtools(
+  (set) => ({
   // empty cart array
   cart: [],
 
@@ -9,15 +11,14 @@ export const useCartStore = create((set) => ({
     cart: [...state.cart, item]
   }) ),
 
-
   // remove item
   removeItem: (id) =>
   set( (state) => ({
     cart: state.cart.filter((item) => item.id !== id),
   }) ),
 
-
   // clear cart
   clearCart: () => set({ cart: [] })
 
-}))
+})
+))
