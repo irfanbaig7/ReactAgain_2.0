@@ -7,6 +7,7 @@ import Loing from './02_useReduAndContextApi/Authenctication/Loing'
 import Profile from './02_useReduAndContextApi/Authenctication/Profile'
 import Zustandd from './03_Zustand/Zustandd'
 import Axios from './04_Axios/Axios'
+import Ex1Interceptors from './04_Axios/Ex1Interceptors'
 
 const App = () => {
   return (
@@ -32,7 +33,8 @@ const App = () => {
 
 
       {/* 04 axios */}
-      <Axios />
+      {/* <Axios /> */}
+      <Ex1Interceptors />
 
     </>
   )
