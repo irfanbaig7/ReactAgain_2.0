@@ -9,9 +9,15 @@ import Zustandd from './03_Zustand/Zustandd'
 import Axios from './04_Axios/Axios'
 import Ex1Interceptors from './04_Axios/Ex1Interceptors'
 import Prj from './05_Prj/Prj'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import Queryy from './06_tanstackQuery/Queryy'
 // import TransFormation from './04_Axios/transformation/TransFormation'
 
 const App = () => {
+
+  const queryClient = new QueryClient()
+
+
   return (
     <>
       {/* 01 useReducer */}
@@ -41,7 +47,14 @@ const App = () => {
 
       {/* mini project */}
       
-        <Prj />
+      {/* <Prj /> */}
+
+
+
+      {/* 06 tannstackQuery */}
+      <QueryClientProvider client={queryClient}>
+        <Queryy />
+      </QueryClientProvider>
       
 
       
