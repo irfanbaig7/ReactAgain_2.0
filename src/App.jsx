@@ -8,6 +8,8 @@ import Profile from './02_useReduAndContextApi/Authenctication/Profile'
 import Zustandd from './03_Zustand/Zustandd'
 import Axios from './04_Axios/Axios'
 import Ex1Interceptors from './04_Axios/Ex1Interceptors'
+import Prj from './05_Prj/Prj'
+// import TransFormation from './04_Axios/transformation/TransFormation'
 
 const App = () => {
   return (
@@ -34,7 +36,19 @@ const App = () => {
 
       {/* 04 axios */}
       {/* <Axios /> */}
-      <Ex1Interceptors />
+      {/* <Ex1Interceptors /> */}
+    
+
+      {/* mini project */}
+      
+        <Prj />
+      
+
+      
+      
+      
+
+
 
     </>
   )
