@@ -11,6 +11,7 @@ import Ex1Interceptors from './04_Axios/Ex1Interceptors'
 import Prj from './05_Prj/Prj'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import Queryy from './06_tanstackQuery/Queryy'
+import TanStack from './06_tanstackPrj/TanStack'
 // import TransFormation from './04_Axios/transformation/TransFormation'
 
 const App = () => {
@@ -52,9 +53,14 @@ const App = () => {
 
 
       {/* 06 tannstackQuery */}
-      <QueryClientProvider client={queryClient}>
+      {/* <QueryClientProvider client={queryClient}>
         <Queryy />
-      </QueryClientProvider>
+      </QueryClientProvider> */}
+
+
+      {/* 06 mini-Project of tanstackQuery */}
+      <TanStack />
+
       
 
       
