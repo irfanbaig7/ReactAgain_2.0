@@ -1,12 +1,21 @@
 import React from 'react'
+import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import ProductList from './components/ProductList'
+import ProductDetails from './components/ProductDetails'
 
 const ReactQuery = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <h1 className="text-2xl font-bold text-center py-4">🛍️ Product Dashboard</h1>
-      <ProductList />
-    </div>
+
+    <Router>
+      <nav className="flex gap-4 p-4 bg-gray-100 shadow">
+        <Link to="/">All Products</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<ProductList />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+      </Routes>
+    </Router>
   )
 }
 

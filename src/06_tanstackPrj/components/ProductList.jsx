@@ -1,5 +1,6 @@
 import React from 'react'
 import { useProducts } from '../hooks/useProducts'
+import { Link } from 'react-router-dom';
 
 const ProductList = () => {
 
@@ -20,6 +21,9 @@ const ProductList = () => {
                 />
                 <h3 className="font-semibold text-sm mt-2 line-clamp-2">{product.title}</h3>
                 <p className="text-gray-600">${product.price}</p>
+                <Link to={`/product/${product.id}`} className='text-blue-600 text-sm mt-2 block'  >
+                    View Details
+                </Link>
             </div>
         ))}
         
