@@ -6,6 +6,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #2a2b2b; 
-    /* color: #fff;  */
+    color: #fff; 
     display: block; /* ya default */
 }

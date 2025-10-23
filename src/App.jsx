@@ -12,6 +12,7 @@ import Prj from './05_Prj/Prj'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import Queryy from './06_tanstackQuery/Queryy'
 import TanStack from './06_tanstackPrj/TanStack'
+import Main from './06_todo/Main'
 // import TransFormation from './04_Axios/transformation/TransFormation'
 
 const App = () => {
@@ -59,7 +60,8 @@ const App = () => {
 
 
       {/* 06 mini-Project of tanstackQuery */}
-      <TanStack />
+      {/* <TanStack /> */}
+      <Main />
 
       
 
