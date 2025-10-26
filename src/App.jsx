@@ -61,7 +61,7 @@ const App = () => {
 
       {/* 06 mini-Project of tanstackQuery */}
       {/* <TanStack /> */}
-      <Main />
+      {/* <Main /> */}
 
       
 
