@@ -1,36 +1,25 @@
+import React, { useEffect, useState } from 'react'
+import { fetchPosts } from '../api/axiosInstance'
 import { useQuery } from '@tanstack/react-query'
-import axios from 'axios'
-import React from 'react'
-
-// queryfn
-const fetchTodos = async () => {
-    const { data } = await axios.get("https://jsonplaceholder.typicode.com/todos?_limit=10")
-    return data
-}
 
 const Todos = () => {
 
-    const { data, isLoading, isError, error } = useQuery({
-        queryKey: ["todos"],
-        queryFn: fetchTodos,
+  const { data, isLoading, isError, error } = useQuery({
+    queryKey: ["posts"],
+    queryFn: fetchPosts,
+  })
 
-    })
-
-    // loading handing
-    if(isLoading) return <p>Loading....</p>
-
-    // Error handling 
-    if(isError) return <p>Error : {error.message}</p>
-
+  if(isLoading) return <p>Loadinggg...</p>
+  if(isError) return <p>{error.message || "Somethig went wrong!"}</p>
+  
 
   return (
     <div>
-        <h1>Todo List</h1>
-        <ul>
-            {data.map((todo) => (
-                <li key={todo.id}>{todo.title}</li>
-            ))}
-        </ul>
+      {data?.slice(0, 10).map((p) => (
+        <li key={p.id}>
+          <p>{p.title}</p>
+        </li>
+      ))}
     </div>
   )
 }
