@@ -14,6 +14,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 // import TanStack from './06_tanstackPrj/TanStack'
 // import Main from './06_todo/Main'
 import QuerySetUp from './06_tanstackQuery/QuerySetUp'
+import HelpFile from './06_tanstackQuery/HelpFile'
 // import TransFormation from './04_Axios/transformation/TransFormation'
 
 const App = () => {
@@ -59,6 +60,7 @@ const App = () => {
 
 
       <QueryClientProvider client={queryClient}>
+        {/* <QuerySetUp /> */}
         <QuerySetUp />
       </QueryClientProvider>
 
