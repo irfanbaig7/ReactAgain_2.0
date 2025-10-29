@@ -37,7 +37,7 @@ const ProductList = () => {
               className="w-full h-40 object-cover mb-2 rounded"
             />
             <h3 className="font-medium">{product.title}</h3>
-            <p className="text-sm text-gray-600">${product.price}</p>
+            <p className="text-sm text-gray-200">${product.price}</p>
             <EditProduct key={product.id} product={product} />
           </div>
         ))}

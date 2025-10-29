@@ -24,3 +24,10 @@ export const updateProduct = async (updateProd) => {
     const res = await axios.put(`${apiUrl}/${updateProd.id}`, updateProd)
     return res.data
 }
+
+
+// delete
+export const deleteProduct = async (id) => {
+    const response = await axios.delete(`${apiUrl}/${id}`)
+    return response.data
+}
