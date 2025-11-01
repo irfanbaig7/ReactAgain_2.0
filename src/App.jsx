@@ -18,15 +18,23 @@ import HelpFile from './06_tanstackQuery/HelpFile'
 // import Again from './06_tanstackQuery/Again/Again'
 import Product from './06_tanstackQuery/Again/Product'
 import { Toaster } from 'react-hot-toast'
+import Product2 from './06_tanstackQuery/project/Product2'
 // import TransFormation from './04_Axios/transformation/TransFormation'
 
 const App = () => {
 
-  const queryClient = new QueryClient()
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: 2, // retry failed requests 2 times
+        refetchOnWindowFocus: false, // user jab tab switch kare, refetch mat karo
+      },
+    },
+  })
 
   return (
     <>
-  
+
       {/* 01 useReducer */}
       {/* <UseReducer /> */}
 
@@ -46,7 +54,7 @@ const App = () => {
       {/* 04 axios */}
       {/* <Axios /> */}
       {/* <Ex1Interceptors /> */}
-    
+
 
       {/* mini project */}
       {/* <Prj /> */}
@@ -65,15 +73,16 @@ const App = () => {
       <QueryClientProvider client={queryClient}>
         {/* <QuerySetUp /> */}
         {/* <QuerySetUp /> */}
-        <Product />
-        <Toaster />
+        {/* <Product /> */}
+        <Product2 />
+        <Toaster position='top-right' />
       </QueryClientProvider>
 
-    
 
-      
-      
-      
+
+
+
+
 
 
 
