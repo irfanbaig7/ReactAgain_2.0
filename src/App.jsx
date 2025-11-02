@@ -19,6 +19,7 @@ import HelpFile from './06_tanstackQuery/HelpFile'
 import Product from './06_tanstackQuery/Again/Product'
 import { Toaster } from 'react-hot-toast'
 import Product2 from './06_tanstackQuery/project/Product2'
+import Optimize from './07_advancedPattern/Optimize'
 // import TransFormation from './04_Axios/transformation/TransFormation'
 
 const App = () => {
@@ -70,13 +71,18 @@ const App = () => {
       {/* <Main /> */}
 
 
-      <QueryClientProvider client={queryClient}>
+      {/* <QueryClientProvider client={queryClient}> */}
         {/* <QuerySetUp /> */}
         {/* <QuerySetUp /> */}
         {/* <Product /> */}
-        <Product2 />
-        <Toaster position='top-right' />
-      </QueryClientProvider>
+        {/* <Product2 />
+        <Toaster position='top-right' /> */}
+      {/* </QueryClientProvider> */}
+
+
+
+      {/* 07 Advanced pattern */}
+      <Optimize />
 
 
 
