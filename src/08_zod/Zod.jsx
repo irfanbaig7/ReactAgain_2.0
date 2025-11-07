@@ -1,5 +1,5 @@
 import React from 'react'
-import z, { email } from 'zod'
+import z from 'zod'
 
 
 
