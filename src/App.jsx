@@ -23,6 +23,7 @@ import Optimize from './07_advancedPattern/Optimize'
 import Zod from './08_zod/Zod'
 import Login from './08_zod/components/Login'
 import SignUpFormZod from './08_zod/components/SignUpFormZod'
+import ProfileUpdateForm from './08_zod/components/ProfileUpdateForm'
 // import TransFormation from './04_Axios/transformation/TransFormation'
 
 const App = () => {
@@ -94,7 +95,8 @@ const App = () => {
 
       {/* <Zod /> */}
       {/* <Login /> */}
-      <SignUpFormZod />
+      {/* <SignUpFormZod /> */}
+      <ProfileUpdateForm />
 
 
 
