@@ -20,18 +20,20 @@ import Product from './06_tanstackQuery/Again/Product'
 import { Toaster } from 'react-hot-toast'
 import Product2 from './06_tanstackQuery/project/Product2'
 import Optimize from './07_advancedPattern/Optimize'
+import Zod from './08_zod/Zod'
+import Login from './08_zod/components/Login'
 // import TransFormation from './04_Axios/transformation/TransFormation'
 
 const App = () => {
 
-  const queryClient = new QueryClient({
-    defaultOptions: {
-      queries: {
-        retry: 2, // retry failed requests 2 times
-        refetchOnWindowFocus: false, // user jab tab switch kare, refetch mat karo
-      },
-    },
-  })
+  // const queryClient = new QueryClient({
+  //   defaultOptions: {
+  //     queries: {
+  //       retry: 2, // retry failed requests 2 times
+  //       refetchOnWindowFocus: false, // user jab tab switch kare, refetch mat karo
+  //     },
+  //   },
+  // })
 
   return (
     <>
@@ -81,8 +83,16 @@ const App = () => {
 
 
 
-      {/* 07 Advanced pattern */}
-      <Optimize />
+      {/* 07 Advanced pattern */} 
+      {/*  custom hooks : debounce, throttle, pagination */}
+      {/* <Optimize />  */}
+
+
+
+      {/* 08_ Zod */}
+
+      {/* <Zod /> */}
+      <Login />
 
 
 
