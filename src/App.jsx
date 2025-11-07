@@ -22,6 +22,7 @@ import Product2 from './06_tanstackQuery/project/Product2'
 import Optimize from './07_advancedPattern/Optimize'
 import Zod from './08_zod/Zod'
 import Login from './08_zod/components/Login'
+import SignUpFormZod from './08_zod/components/SignUpFormZod'
 // import TransFormation from './04_Axios/transformation/TransFormation'
 
 const App = () => {
@@ -92,7 +93,8 @@ const App = () => {
       {/* 08_ Zod */}
 
       {/* <Zod /> */}
-      <Login />
+      {/* <Login /> */}
+      <SignUpFormZod />
 
 
 
